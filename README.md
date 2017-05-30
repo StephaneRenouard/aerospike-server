@@ -230,9 +230,9 @@ for popular programming languages.
 
 
 
-## CPU data for Cortex A53 M64 (BananaPi M64)
+# CPU data for Cortex A53 M64 (BananaPi M64)
 
-# AArch64
+## AArch64
 
 processor	: 0-3
 BogoMIPS	: 38.40
@@ -243,7 +243,18 @@ CPU variant	: 0x0
 CPU part	: 0xd03
 CPU revision	: 4
 
-# Make parameters
+## Make parameters
 HOST="armv7a-hardfloat-linux-gnueabi"
 CFLAGS="-O2 -pipe -march=armv7-a -mfpu=neon-vfpv4 -mfloat-abi=hard"
 CXXFLAGS="${CFLAGS}"
+
+
+# compilations parameters for BananaPi M64
+
+add liblua*
+cp liblua*.a /usr/lib/liblua.a
+add libssl*-dev
+remove nocona from Makefiles (3 times) and replace by -march=armv7-a
+make USE_LUAJIT=0 -j4
+
+
