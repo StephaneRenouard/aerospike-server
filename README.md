@@ -228,3 +228,22 @@ detailed information about configuring and running the Aerospike
 Database Server, as well as about the Aerospike client API packages
 for popular programming languages.
 
+
+
+## CPU data for Cortex A53 M64 (BananaPi M64)
+
+# AArch64
+
+processor	: 0-3
+BogoMIPS	: 38.40
+Features	: fp asimd evtstrm crc32
+CPU implementer	: 0x41
+CPU architecture: 8
+CPU variant	: 0x0
+CPU part	: 0xd03
+CPU revision	: 4
+
+# Make parameters
+HOST="armv7a-hardfloat-linux-gnueabi"
+CFLAGS="-O2 -pipe -march=armv7-a -mfpu=neon-vfpv4 -mfloat-abi=hard"
+CXXFLAGS="${CFLAGS}"
