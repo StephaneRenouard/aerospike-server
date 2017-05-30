@@ -230,10 +230,9 @@ for popular programming languages.
 
 
 
-# CPU data for Cortex A53 M64 (BananaPi M64)
+# Aerospike on Cortex A53 M64 (BananaPi M64)
 
 ## AArch64
-
 processor	: 0-3
 BogoMIPS	: 38.40
 Features	: fp asimd evtstrm crc32
@@ -243,14 +242,13 @@ CPU variant	: 0x0
 CPU part	: 0xd03
 CPU revision	: 4
 
-## Make parameters
+## Compilation parameters for BananaPi M64
 HOST="armv7a-hardfloat-linux-gnueabi"
 CFLAGS="-O2 -pipe -march=armv7-a -mfpu=neon-vfpv4 -mfloat-abi=hard"
 CXXFLAGS="${CFLAGS}"
 
 
-# compilations parameters for BananaPi M64
-
+## Compilation parameters for BananaPi M64
 add liblua*
 cp liblua*.a /usr/lib/liblua.a
 add libssl*-dev
